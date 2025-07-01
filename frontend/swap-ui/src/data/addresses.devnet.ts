@@ -53,6 +53,16 @@ export const addressesDevnet = {
         'pair': '0xPAIRGOODGIFT',
         'a': '0xGOOD0000000000000000000000000000000000001',
         'b': '0xGIFT0000000000000000000000000000000000003'
+      },
+      'usdc/wsol': {
+        'pair': '0x5ec7becAB1289302e76f6c06aadc486AfB82Dadf',
+        'a': '0x512E48836Cd42F3eB6f50CEd9ffD81E0a7F15103',
+        'b': '0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c'
+      },
+      'wsol/usdc': {
+        'pair': '0x5ec7becAB1289302e76f6c06aadc486AfB82Dadf',
+        'a': '0x512E48836Cd42F3eB6f50CEd9ffD81E0a7F15103',
+        'b': '0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c'
       }
     }
   }
