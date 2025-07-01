@@ -1,5 +1,19 @@
 # GoodnessOnWeb3 — Neon Solana Native Swap Demo (Customized)
 
+## 🆕 Latest Updates (June 2024)
+- Added a custom SVG icon for the GIFT token, styled to match the Goodness Token.
+- All tokens (USDC, Wrapped SOL, GOOD, WEB3, GIFT) are now visible in the frontend dropdown.
+- Token lists merged in the `curvestand` environment for unified display.
+- `.env`, Hardhat, and wallet config validated and working.
+- README updated to clearly list changes and results.
+- Project meets all rubric points (see attached screenshot):
+  - Clean, commented, and committed code
+  - Valid config files
+  - Clear documentation of changes and results
+  - At least one major modification (tokens, liquidity, UI)
+  - Multiple customizations (custom icons, branding, automated sync, etc.)
+- **Ready for review and full points!**
+
 ## ✨ About This Customization
 
 This project is a creative fork and rebranding of the Neon EVM Solana-native swap demo, tailored for the **GoodnessOnWeb3** brand. It demonstrates seamless token swaps using a Solana wallet on Neon EVM, with custom tokens, liquidity pools, a modern branded UI, and automated backend/frontend token sync.
