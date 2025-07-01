@@ -1,4 +1,3 @@
-import { addressesCurvestand } from './addresses.curvestand';
 import { addressesDevnet } from './addresses.devnet';
 import { CSPLToken } from '../models';
 
@@ -16,15 +15,9 @@ export const tokenIcons: Record<string, string> = {
 };
 
 export function tokens(env: string): { swap: any, tokensV1: CSPLToken[], tokensV2: CSPLToken[] } {
-  let swap: any = addressesCurvestand.swap;
-  let tokensV1: CSPLToken[] = addressesCurvestand.tokensV1;
-  let tokensV2: CSPLToken[] = addressesCurvestand.tokensV2;
-
-  if (env === 'devnet') {
-    swap = addressesDevnet.swap;
-    tokensV1 = addressesDevnet.tokensV1;
-    tokensV2 = addressesDevnet.tokensV2;
-  }
+  let swap: any = addressesDevnet.swap;
+  let tokensV1: CSPLToken[] = addressesDevnet.tokensV1;
+  let tokensV2: CSPLToken[] = addressesDevnet.tokensV2;
 
   return { swap, tokensV1, tokensV2 };
 }
