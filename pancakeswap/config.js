@@ -33,5 +33,8 @@ module.exports = {
     curvestand: '',
     neondevnet: '',
     neonmainnet: ''
-  }
+  },
+  good_token: {},
+  web3_power: {},
+  gift_token: {}
 };

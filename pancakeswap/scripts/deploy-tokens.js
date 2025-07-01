@@ -2,6 +2,8 @@ const { ethers, network, run } = require('hardhat');
 const { default: bs58 } = require('bs58');
 const config = require('../config');
 const { deployerAirdrop } = require('./utils');
+const fs = require('fs');
+const path = require('path');
 
 async function main() {
   await run('compile');
@@ -17,45 +19,43 @@ async function main() {
 
   const mintAuthority = deployer.address; // Set deployer as mint authority
 
-  await deployERC20ForSPLMintable(
-    'token_A',
-    'Token A',
-    'TOKEN_A',
-    9,
-    mintAuthority
-  );
-
-  await deployERC20ForSPLMintable(
-    'token_B',
-    'Token B',
-    'TOKEN_B',
-    12,
-    mintAuthority
-  );
-
-  await deployERC20ForSPLMintable(
+  // Collect deployed token info
+  const tokensV1 = [];
+  tokensV1.push(await deployERC20ForSPLMintable(
     'good_token',
     'Goodness Token',
     'GOOD',
     9,
     mintAuthority
-  );
-
-  await deployERC20ForSPLMintable(
+  ));
+  tokensV1.push(await deployERC20ForSPLMintable(
     'web3_power',
     'Web3 Power',
     'WEB3',
     9,
     mintAuthority
-  );
-
-  await deployERC20ForSPLMintable(
+  ));
+  tokensV1.push(await deployERC20ForSPLMintable(
     'gift_token',
     'Gift Token',
     'GIFT',
     6,
     mintAuthority
-  );
+  ));
+
+  // If you have v2 tokens, collect them similarly:
+  const tokensV2 = [];
+
+  // Write to deployed-tokens.json
+  const outputPath = path.resolve(__dirname, '../deployed-tokens.json');
+  try {
+    await fs.promises.writeFile(outputPath, JSON.stringify({ tokensV1, tokensV2 }, null, 2));
+    console.log('Deployed token info written to deployed-tokens.json');
+    console.log('Wrote deployed-tokens.json to:', outputPath);
+  } catch (error) {
+    console.error('Error writing deployed-tokens.json:', error);
+    throw error;
+  }
 
   console.log('\n');
 }
@@ -66,7 +66,7 @@ async function deployERC20ForSPLMintable(
   symbol,
   decimals,
   mintAuthority,
-  contract = 'ERC20ForSplMintable'
+  contract = 'contracts/erc20-for-spl/ERC20ForSPL.sol:ERC20ForSplMintable'
 ) {
   const ERC20ForSPLMintableContractFactory = await ethers.getContractFactory(contract);
   let token;
@@ -108,14 +108,12 @@ async function deployERC20ForSPLMintable(
   };
 }
 
-/*
 main()
-    .then(() => process.exit(0))
-    .catch((error) => {
-        console.error(error)
-        process.exit(1)
-    })
-*/
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 
 module.exports = {
   deployERC20ForSPLMintable

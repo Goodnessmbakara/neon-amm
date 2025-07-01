@@ -1,0 +1,26 @@
+{
+  "tokensV1": [
+    {
+      "address": "0x41D10afE46D28bBC1e5ead8fdF3389ca4855FA3B",
+      "address_spl": "DMtyNV7XfRgAGB8ZYVnuxrYvRUVA9KTyZzru1sYeyrmD",
+      "name": "Goodness Token",
+      "symbol": "GOOD",
+      "decimals": 9
+    },
+    {
+      "address": "0x8232c407ed9980DC1f1E34572eA499514C38340b",
+      "address_spl": "bYq5g34SRpkFn3ztTAWkwKUrunL6jD6vzveXivc6SzV",
+      "name": "Web3 Power",
+      "symbol": "WEB3",
+      "decimals": 9
+    },
+    {
+      "address": "0x6c7b9201e6DFF31004c6487DAc1b9be703f2c2Cc",
+      "address_spl": "44yQFpzxnAh1kcXUtd6fBSgfdQqT1duTwf2dSiuzxvv6",
+      "name": "Gift Token",
+      "symbol": "GIFT",
+      "decimals": 6
+    }
+  ],
+  "tokensV2": []
+}

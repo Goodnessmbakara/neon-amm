@@ -1,42 +1,43 @@
 export const addressesCurvestand = {
   'tokensV1': [
     {
-      'address': '0xGOOD0000000000000000000000000000000000001',
-      'address_spl': 'GOOD_SPL_ADDRESS',
+      'address': '0x512E48836Cd42F3eB6f50CEd9ffD81E0a7F15103',
+      'address_spl': 'F4DgNXqiT3zUQA7dhqN5VzEPkRcd8vtqFwpJSwEEvnz5',
+      'name': 'USDC',
+      'symbol': 'USDC',
+      'decimals': 6
+    },
+    {
+      'address': '0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c',
+      'address_spl': 'So11111111111111111111111111111111111111112',
+      'name': 'Wrapped SOL',
+      'symbol': 'wSOL',
+      'decimals': 9
+    },
+    {
+      'address': '0x41D10afE46D28bBC1e5ead8fdF3389ca4855FA3B',
+      'address_spl': 'DMtyNV7XfRgAGB8ZYVnuxrYvRUVA9KTyZzru1sYeyrmD',
       'name': 'Goodness Token',
       'symbol': 'GOOD',
       'decimals': 9
     },
     {
-      'address': '0xWEB30000000000000000000000000000000000002',
-      'address_spl': 'WEB3_SPL_ADDRESS',
+      'address': '0x8232c407ed9980DC1f1E34572eA499514C38340b',
+      'address_spl': 'bYq5g34SRpkFn3ztTAWkwKUrunL6jD6vzveXivc6SzV',
       'name': 'Web3 Power',
       'symbol': 'WEB3',
       'decimals': 9
     },
     {
-      'address': '0xGIFT0000000000000000000000000000000000003',
-      'address_spl': 'GIFT_SPL_ADDRESS',
+      'address': '0x6c7b9201e6DFF31004c6487DAc1b9be703f2c2Cc',
+      'address_spl': '44yQFpzxnAh1kcXUtd6fBSgfdQqT1duTwf2dSiuzxvv6',
       'name': 'Gift Token',
       'symbol': 'GIFT',
       'decimals': 6
     }
   ],
   'tokensV2': [
-    {
-      'address': '0xGOOD0000000000000000000000000000000000004',
-      'address_spl': 'GOODV2_SPL_ADDRESS',
-      'name': 'Goodness Token v2',
-      'symbol': 'GOODv2',
-      'decimals': 9
-    },
-    {
-      'address': '0xWEB30000000000000000000000000000000000005',
-      'address_spl': 'WEB3V2_SPL_ADDRESS',
-      'name': 'Web3 Power v2',
-      'symbol': 'WEB3v2',
-      'decimals': 9
-    }
+
   ],
   'swap': {
     'neonTokenTransfer': '0xb3bFD57D36D09209fFF3B5D4052c9c271FE11AAc',
